@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Agent Slot</title>
+		<script src="lib/sdpi-components.js"></script>
+	</head>
+	<body>
+		<sdpi-item label="Slot">
+			<sdpi-range setting="slot" min="1" max="32" step="1" showlabels></sdpi-range>
+		</sdpi-item>
+
+		<sdpi-item label="Workspace">
+			<sdpi-select setting="pinnedPath" datasource="getWorkspaces" placeholder="Auto"></sdpi-select>
+		</sdpi-item>
+
+		<sdpi-item label="How it works">
+			<sdpi-textarea
+				readonly
+				rows="5"
+				value="Auto: the slot shows the Nth most recently active Copilot agent across your open VS Code windows.&#10;Workspace: pin this key to one project so it never moves.&#10;Press the key to focus that VS Code window and clear the green 'done' highlight."
+			></sdpi-textarea>
+		</sdpi-item>
+	</body>
+</html>

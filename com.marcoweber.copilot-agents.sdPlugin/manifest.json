@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+	"UUID": "com.marcoweber.copilot-agents",
+	"Name": "Copilot Agents",
+	"Version": "1.0.0.0",
+	"Author": "Marco Weber",
+	"Description": "Shows the status of running GitHub Copilot agent sessions across all your open VS Code windows. One key per agent, press to focus the matching window.",
+	"Icon": "imgs/plugin/marketplace",
+	"Category": "Copilot Agents",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
+	"OS": [
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "24",
+		"Debug": "enabled"
+	},
+	"Actions": [
+		{
+			"UUID": "com.marcoweber.copilot-agents.slot",
+			"Name": "Agent Slot",
+			"Tooltip": "Shows one GitHub Copilot agent session. Press to focus its VS Code window.",
+			"Icon": "imgs/actions/slot/icon",
+			"PropertyInspectorPath": "ui/agent-slot.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/slot/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	]
+}

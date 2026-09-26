@@ -1,0 +1,5 @@
+node_modules/
+.probe/
+com.marcoweber.copilot-agents.sdPlugin/bin/
+com.marcoweber.copilot-agents.sdPlugin/logs/
+*.streamDeckPlugin
